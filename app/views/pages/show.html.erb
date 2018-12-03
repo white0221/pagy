@@ -1,2 +1,10 @@
 <h1>Pages#show</h1>
 <p>Find me in app/views/pages/show.html.erb</p>
+
+<% @posts.each do |post| %>
+  <p><%= post.name %></p>
+  <ul>
+    <li><%= post.content %></li>
+  </ul>
+<% end %>
+<%== pagy_nav(@pagy) %>
